@@ -1,0 +1,51 @@
+  
+  [1X1 [33X[0;0YInstalling and Loading the [5XSmallCancellation[105X[101X[1X Package[133X[101X
+  
+  
+  [1X1.1 [33X[0;0YCompiling Binaries of the [5XSmallCancellation[105X[101X[1X Package[133X[101X
+  
+  [33X[0;0YAfter  unpacking  the  archive,  go  to  the newly created [11Xsmallcancellation[111X
+  directory and call [10X./configure[110X to use the default [10X../..[110X path to the [5XGAP[105X home
+  directory  or  [10X./configure  [3Xpath[103X[10X[110X  where  [3Xpath[103X  is  the  path to the [5XGAP[105X home
+  directory,  if  the package is being installed in a non-default location. So
+  for  example  if you install the package in the [11X~/.gap/pkg[111X directory and the
+  [5XGAP[105X home directory is [11X~/gap4r5[111X then you have to call[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[28X./configure ../../../gap4r5/[128X[104X
+  [4X[32X[104X
+  
+  [33X[0;0YThis  will  fetch the architecture type for which [5XGAP[105X has been compiled last
+  and create a [11XMakefile[111X. Now simply call[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[28Xmake[128X[104X
+  [4X[32X[104X
+  
+  [33X[0;0Yto compile the binary and to install it in the appropriate place.[133X
+  
+  [33X[0;0YIf  [5XGAP[105X  cannot  find a working binary, some computations may take more time
+  (specially for large presentations).[133X
+  
+  
+  [1X1.2 [33X[0;0YLoading the [5XSmallCancellation[105X[101X[1X Package[133X[101X
+  
+  [33X[0;0YTo use the [5XSmallCancellation[105X Package you have to request it explicitly. This
+  is done by calling [2XLoadPackage[102X ([14XReference: LoadPackage[114X):[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XLoadPackage("smallcancellation");[127X[104X
+    [4X[28X----------------------------------------------------------------[128X[104X
+    [4X[28XLoading  SmallCancellation 1.0.2[128X[104X
+    [4X[28Xby Iván Sadofschi Costa (http://mate.dm.uba.ar/~isadofschi)[128X[104X
+    [4X[28XFor help, type: ?SmallCancellation [128X[104X
+    [4X[28X----------------------------------------------------------------[128X[104X
+    [4X[28Xtrue[128X[104X
+  [4X[32X[104X
+  
+  [33X[0;0YThe [5XSmallCancellation[105X requires the [5XGrape[105X Package (version >=4.7).[133X
+  
+  [33X[0;0YIf  you  want  to load the [5XSmallCancellation[105X package by default, you can put
+  the  [10XLoadPackage[110X  command  into your [11Xgaprc[111X file (see Section [14X'Reference: The
+  gap.ini and gaprc files'[114X).[133X
+  

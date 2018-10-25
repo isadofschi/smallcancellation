@@ -1,0 +1,22 @@
+# sample makefile
+CC=g++
+GAPARCH=@GAPARCH@
+
+all: default
+
+default: bin/$(GAPARCH)/smallcancellation
+
+bin/$(GAPARCH)/smallcancellation: src/smallcancellation.cpp
+	mkdir -p bin/$(GAPARCH)
+	$(CC) -O2 -o  bin/$(GAPARCH)/smallcancellation src/smallcancellation.cpp
+
+clean:
+	rm -rf bin
+
+distclean: clean
+	rm -rf Makefile
+
+doc:
+	gap -A -q -T < makedocrel.g
+
+.PHONY: all default clean distclean doc

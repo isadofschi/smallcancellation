@@ -1,0 +1,19 @@
+  
+  
+  [1XIndex[101X
+  
+  [2XExponentMatrixOfGroup[102X  2.5-3
+  [2XExponentMatrixOfPresentation[102X  2.5-4
+  [2XGraphFromAdjacencyMatrix[102X  2.5-1
+  [2XGroupSatisfiesC[102X  2.4-1
+  [2XGroupSatisfiesCPrime[102X  2.3-1
+  [2XGroupSatisfiesT[102X  2.4-3
+  [2XPiecesOfGroup[102X  2.2-1
+  [2XPiecesOfPresentation[102X  2.2-2
+  [2XPresentationSatisfiesC[102X  2.4-2
+  [2XPresentationSatisfiesCPrime[102X  2.3-2
+  [2XPresentationSatisfiesT[102X  2.4-4
+  [2XWhiteheadGraphAdjacencyMatrix[102X  2.5-2
+  
+  
+  -------------------------------------------------------

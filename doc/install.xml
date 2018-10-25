@@ -1,0 +1,69 @@
+
+<!-- install.xml            SmallCancellation                              -->
+
+
+<!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
+<Chapter Label="Installing and Loading the SmallCancellation Package">
+<Heading>Installing and Loading the <Package>SmallCancellation</Package> Package</Heading>
+
+<!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
+<Section Label="Compiling Binaries of the SmallCancellation Package">
+<Heading>Compiling Binaries of the <Package>SmallCancellation</Package> Package</Heading>
+
+After unpacking the archive, go to the newly created <F>smallcancellation</F>  directory
+and call <C>./configure</C> to use the default <C>../..</C> path to the
+&GAP; home directory or <C>./configure <A>path</A></C> where <A>path</A> is 
+the path to the &GAP; home directory, if the package is being installed in a 
+non-default location. So for example if you install the package in the
+<F>~/.gap/pkg</F> directory and the &GAP; home directory is <F>~/gap4r5</F>
+then you have to call
+<P/>
+<Log><![CDATA[
+./configure ../../../gap4r5/
+]]></Log>
+<P/>
+This will fetch the architecture type for which &GAP; has been compiled
+last and create a <F>Makefile</F>. Now simply call
+<P/>
+<Log><![CDATA[
+make
+]]></Log>
+<P/>
+to compile the binary and to install it in the appropriate place.<P/>
+
+If &GAP; cannot find a working binary, some computations may take more time (specially for large presentations).
+
+</Section>
+
+
+<!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
+<Section Label="Loading the SmallCancellation Package">
+<Heading>Loading the <Package>SmallCancellation</Package> Package </Heading>
+
+To use the <Package>SmallCancellation</Package> Package you have to request it explicitly. This  is
+done by calling <Ref Func="LoadPackage" BookName="ref"/>:
+<P/>
+<Example><![CDATA[
+gap> LoadPackage("smallcancellation");
+----------------------------------------------------------------
+Loading  SmallCancellation 1.0.2
+by Iván Sadofschi Costa (http://mate.dm.uba.ar/~isadofschi)
+For help, type: ?SmallCancellation 
+----------------------------------------------------------------
+true
+]]></Example>
+<P/>
+
+The <Package>SmallCancellation</Package> requires the <Package>Grape</Package> Package (version >=4.7).<P/>
+
+If you want to load the <Package>SmallCancellation</Package> package by default, you  can  put  the
+<C>LoadPackage</C> command  into  your  <F>gaprc</F>  file  
+(see  Section&nbsp;<Ref Sect="The gap.ini and gaprc files" BookName="ref"/>).
+
+</Section>
+</Chapter>
+
+<!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
+<!-- %% -->
+<!-- %E -->
+
