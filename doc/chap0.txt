@@ -6,7 +6,7 @@
                [1XMetric and nonmetric small cancellation conditions[101X
   
   
-                                 Version 1.0.2
+                                 Version 1.0.3
   
   
                               Iván Sadofschi Costa
