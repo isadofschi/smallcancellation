@@ -7,7 +7,7 @@
 <TitlePage>
   <Title>The <Package>SmallCancellation</Package> Package</Title>
   <Subtitle>Metric and nonmetric small cancellation conditions</Subtitle>
-  <Version>Version 1.0.2</Version>
+  <Version>Version 1.0.3</Version>
   <Author>Iván Sadofschi Costa
     <Email>isadofschi@dm.uba.ar</Email>
     <Homepage>http://mate.dm.uba.ar/~isadofschi</Homepage>
@@ -40,7 +40,7 @@ A <E>piece</E> of <M>R</M> is a word that is a common prefix of two different wo
 
 We say that a presentation <M>P=\langle X \mid R\rangle</M> <E>satisfies the small cancellation condition <M>C(p)</M></E> if no relator <M> r </M> in <M>R^*</M> is a product of fewer than <M>p</M> pieces. <P/>
 
-We say that <M>P</M> <E>satisfies the small cancellation condition <M>C'(\lambda)</M></E>  if for all <M> r </M> in <M>R^*</M>, if <M>r=bc</M> and <M>b</M> is a piece then <M>|b| &lt; \lambda |r| </M> is a product of fewer than <M>p</M> pieces. <P/> 
+We say that <M>P</M> <E>satisfies the small cancellation condition <M>C'(\lambda)</M></E>  if for all <M> r </M> in <M>R^*</M>, if <M>r=bc</M> and <M>b</M> is a piece then <M>|b| &lt; \lambda |r| </M>. <P/> 
 
 We say that <M>P</M> <E>satisfies the small cancellation condition <M>T(q)</M></E> if for all <M>h</M> such that <M>3\leq h &lt; q</M> and for all elements <M>r_1,\ldots, r_h</M> in <M>R^*</M>, if no succesive elements <M>r_i,r_{i+1}</M> is an inverse pair, then at least one of the products <M>r_1r_2,\ldots r_{h-1}r_h, r_hr_1</M> is reduced without cancellation.
 

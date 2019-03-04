@@ -13,9 +13,9 @@ PackageName := "SmallCancellation",
 Subtitle := "SmallCancellation/metric and nonmetric conditions",
 
 
-Version := "1.0.2",
+Version := "1.0.3",
 
-Date := "18/10/2018",
+Date := "04/03/2019",
 
 PackageWWWHome :=
   Concatenation( "https://github.com/isadofschi/", LowercaseString( ~.PackageName ) ),

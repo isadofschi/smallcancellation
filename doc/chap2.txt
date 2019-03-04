@@ -20,8 +20,7 @@
   condition [22XC(p)[122X[113X if no relator [22Xr[122X in [22XR^*[122X is a product of fewer than [22Xp[122X pieces.[133X
   
   [33X[0;0YWe  say that [22XP[122X [13Xsatisfies the small cancellation condition [22XC'(λ)[122X[113X if for all [22Xr[122X
-  in [22XR^*[122X, if [22Xr=bc[122X and [22Xb[122X is a piece then [22X|b| < λ |r|[122X is a product of fewer than
-  [22Xp[122X pieces.[133X
+  in [22XR^*[122X, if [22Xr=bc[122X and [22Xb[122X is a piece then [22X|b| < λ |r|[122X.[133X
   
   [33X[0;0YWe  say  that [22XP[122X [13Xsatisfies the small cancellation condition [22XT(q)[122X[113X if for all [22Xh[122X
   such that [22X3≤ h < q[122X and for all elements [22Xr_1,..., r_h[122X in [22XR^*[122X, if no succesive

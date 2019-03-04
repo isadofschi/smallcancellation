@@ -26,7 +26,7 @@ InstallGlobalFunction(NewTrieOfPieces, function()
 	# The trie is represented as a list of nodes
 	# [node,piece,relation,children]
 	# where node, piece, relation are bools
-	# and children a list that indicates the indexes of the children
+	# and children a dictionary that indicates the indexes of the children
 	# T[1] is the root, representing the empty word
 
 	local N,T,
@@ -61,9 +61,9 @@ InstallGlobalFunction(NewTrieOfPieces, function()
 			T[i][3]:=true;
 		fi;
     end;;
-	insert_relation:=function(w)
-		_insert_relation(w,0,1);
-	end;;
+    insert_relation:=function(w)
+        _insert_relation(w,0,1);
+    end;;
 	
     _is_piece := function(w, pos, i)
 		local x, d, i1;
