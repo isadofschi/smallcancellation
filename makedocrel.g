@@ -5,11 +5,11 @@
 # manual.css
 # makedoc.g
 
-path := Directory("./");;
+path := Directory("./doc");;
 main := "main.xml";;
 files := [
-		"../lib/smallcancellation.gd", "../lib/smallcancellation.gi",
-		"../lib/smallcancellation_external.gd", "../lib/smallcancellation_external.gi",
+		"./lib/smallcancellation.gd", "./lib/smallcancellation.gi",
+		"./lib/smallcancellation_external.gd", "./lib/smallcancellation_external.gi",
 ];;
 bookname := "SmallCancellation";;
 doc := ComposedDocument("GAPDoc", path, main, files, true);;
