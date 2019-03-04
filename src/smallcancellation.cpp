@@ -23,11 +23,11 @@ typedef vector<int> word; //  a word in letter representation (as given by Lette
 
 struct Trie
 {
-    Trie() {node=false; piece=false; relation=false;}
+	Trie() {node=false; piece=false; relation=false;}
     bool node;
     bool piece; // true iff it is a piece
     bool relation; //true iff it is a relation
-	//int length;
+    //int length;
     map<int, Trie> children;
 
     void insert_relation(word &w, int pos=0){
@@ -38,15 +38,15 @@ struct Trie
 			node=true;
 			//length = pos;
 		}
-        if( pos != w.size() ){
-            int x=w[pos];
-            children[x].insert_relation(w, pos+1);
+		if( pos != w.size() ){
+        	int x=w[pos];
+        	children[x].insert_relation(w, pos+1);
         }else{
 			relation=true;
 		}
-    }
+	}
 
-   /* bool find(word &w, int pos=0){
+	/* bool find(word &w, int pos=0){
         if( pos==w.size() )
             return true;
         int x=w[pos];
@@ -54,12 +54,12 @@ struct Trie
             return children[x].find(w, pos+1 );
         return false;
     }*/
-    bool is_piece(word &w, int pos=0){
+	bool is_piece(word &w, int pos=0){
         if( pos==w.size() )
-            return piece;
+			return piece;
         int x=w[pos];
         if( element( x, children) )
-            return children[x].is_piece(w, pos+1 );
+			return children[x].is_piece(w, pos+1 );
         return false;
     }
     bool is_relation(word &w, int pos=0){
@@ -67,17 +67,17 @@ struct Trie
             return relation;
         int x=w[pos];
         if( element( x, children) )
-            return children[x].is_relation(w, pos+1 );
+        	return children[x].is_relation(w, pos+1 );
         return false;
     }    
     int max_piece(word &w, int pos=0){
-	// length of the largest prefix of w' that is a piece
-	// where w' is the subword of w that starts at pos
-	if( pos==w.size() )
-            return 0;
+		// length of the largest prefix of w' that is a piece
+		// where w' is the subword of w that starts at pos
+		if( pos==w.size() )
+			return 0;
         int x=w[pos];
         if( element( x, children) && children[x].piece )
-            return 1+children[x].max_piece( w, pos+1 );
+			return 1+children[x].max_piece( w, pos+1 );
         return 0;
     }
 
