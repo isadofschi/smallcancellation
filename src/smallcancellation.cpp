@@ -1,6 +1,6 @@
 /*****************************************************************************
-* smallCancellation.cpp 	SmallCancellation		Iván Sadofschi Costa	 *
-*							Package			  		(c) 2018                 *
+* smallCancellation.cpp         SmallCancellation    Iván Sadofschi Costa    *
+*                               Package              (c) 2018                *
 *****************************************************************************/
 
 #include <iostream>
@@ -69,18 +69,17 @@ struct Trie
         if( element( x, children) )
             return children[x].is_relation(w, pos+1 );
         return false;
-    }
-	int max_piece(word &w, int pos=0){
-		// length of the largest prefix of w' that is a piece
-		// where w' is the subword of w that starts at pos
-
-		if( pos==w.size() )
+    }    
+    int max_piece(word &w, int pos=0){
+	// length of the largest prefix of w' that is a piece
+	// where w' is the subword of w that starts at pos
+	if( pos==w.size() )
             return 0;
         int x=w[pos];
         if( element( x, children) && children[x].piece )
             return 1+children[x].max_piece( w, pos+1 );
         return 0;
-	}
+    }
 
 };
 
