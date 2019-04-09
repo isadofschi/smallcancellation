@@ -14,8 +14,6 @@ DeclareGlobalFunction("PiecesOfPresentation");#
 DeclareGlobalFunction("GroupSatisfiesCPrime");#
 DeclareGlobalFunction("PresentationSatisfiesCPrime");#
 
-#DeclareGlobalFunction("IsProductOfPieces");
-
 
 DeclareGlobalFunction("GroupSatisfiesC");#
 DeclareGlobalFunction("PresentationSatisfiesC");#
