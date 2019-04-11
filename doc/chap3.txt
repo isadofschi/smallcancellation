@@ -1,0 +1,10 @@
+  
+  [1X3 [33X[0;0YImplementation details[133X[101X
+  
+  
+  [1X3.1 [33X[0;0YImplementation details[133X[101X
+  
+  [33X[0;0YThe  package  stores  relators inside a data structure called trie [?trie?].
+  This  provides an efficient way to write a word as a product of pieces using
+  the minimum possible number of pieces.[133X
+  

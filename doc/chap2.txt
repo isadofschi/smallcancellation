@@ -185,3 +185,10 @@
   relator  [22Xr_i[122X.  Returns  the  adjacency  matrix of the Whitehead graph of the
   FpGroup [3XG[103X. Note that the Whitehead graph may not be simple.[133X
   
+  
+  [1X2.6 [33X[0;0YImplementation details[133X[101X
+  
+  [33X[0;0YRelators  and  their  prefixes  are  stored  in a data structure called trie
+  [Wik19].  This  provides  an  efficient  way to write a word as a product of
+  pieces using the minimum possible number of pieces.[133X
+  

@@ -222,6 +222,14 @@ Returns the adjacency matrix of the Whitehead graph of the FpGroup <A>G</A>. Not
 
 <!-- ########################################################################################################### -->
 
+<Section>
+<Heading>Implementation details</Heading>
+
+Relators and their prefixes are stored in a data structure called trie <Cite Key="Trie" />.
+This provides an efficient way to write a word as a product of pieces using the minimum possible number of pieces.
+
+</Section>
+
 </Chapter>
 
 </Body>

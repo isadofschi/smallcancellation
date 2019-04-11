@@ -52,6 +52,9 @@
 <span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap2.html#X7926E93A7893185E">2.5-3 ExponentMatrixOfGroup</a></span>
 <span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap2.html#X867DA54883A35081">2.5-4 ExponentMatrixOfPresentation</a></span>
 </div></div>
+<div class="ContSect"><span class="tocline"><span class="nocss">&nbsp;</span><a href="chap2.html#X7AB84A0B83B2C1F1">2.6 <span class="Heading">Implementation details</span></a>
+</span>
+</div>
 </div>
 
 <h3>2 <span class="Heading">Small Cancellation Theory</span></h3>
@@ -226,6 +229,12 @@ false
 
 <div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; ExponentMatrixOfPresentation</code>( <var class="Arg">P</var> )</td><td class="tdright">( function )</td></tr></table></div>
 <p>If <var class="Arg">P</var> is a presentation with <var class="Arg">m</var> relators and <var class="Arg">n</var> generators, it returns the <var class="Arg">m</var> by <var class="Arg">n</var> matrix <span class="SimpleMath">A</span> such that <span class="SimpleMath">A_i,j</span> is the total exponent of the generator <span class="SimpleMath">g_j</span> in the relator <span class="SimpleMath">r_i</span>. Returns the adjacency matrix of the Whitehead graph of the FpGroup <var class="Arg">G</var>. Note that the Whitehead graph may not be simple.</p>
+
+<p><a id="X7AB84A0B83B2C1F1" name="X7AB84A0B83B2C1F1"></a></p>
+
+<h4>2.6 <span class="Heading">Implementation details</span></h4>
+
+<p>Relators and their prefixes are stored in a data structure called trie <a href="chapBib.html#biBTrie">[Wik19]</a>. This provides an efficient way to write a word as a product of pieces using the minimum possible number of pieces.</p>
 
 
 <div class="chlinkprevnextbot">&nbsp;<a href="chap0.html">[Top of Book]</a>&nbsp;  <a href="chap0.html#contents">[Contents]</a>&nbsp;  &nbsp;<a href="chap1.html">[Previous Chapter]</a>&nbsp;  &nbsp;<a href="chapBib.html">[Next Chapter]</a>&nbsp;  </div>

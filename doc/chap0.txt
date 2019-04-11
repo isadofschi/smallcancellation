@@ -48,6 +48,7 @@
       2.5-2 WhiteheadGraphAdjacencyMatrix
       2.5-3 ExponentMatrixOfGroup
       2.5-4 ExponentMatrixOfPresentation
+    2.6 [33X[0;0YImplementation details[133X
   
   
   [32X
