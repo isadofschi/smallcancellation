@@ -5,25 +5,30 @@
 InstallGlobalFunction( PrintPresentationToFile, function(G,filename)
 	# prints the presentation of an FpGroup G to filename
 	# but first it cyclically reduces every relator
-	local rels,num_gen, w,x;
+	local rels,num_gen, w,x,f;
 	rels:=List(RelatorsOfFpGroup(G),w -> LetterRepAssocWord(CyclicallyReducedWord(w)) );
 	num_gen:=Size(GeneratorsOfGroup(G));
-	AppendTo(filename, num_gen, " ", Size(rels), "\n\n");
+	f := IO_File(filename,"w");
+	IO_Write(f, num_gen);
+	IO_Write(f, " ");
+	IO_Write(f, Size(rels));
+	IO_Write(f, "\n\n");
 	for w in rels do
-		AppendTo(filename, Size(w));
-		AppendTo(filename, "\n");
+		IO_Write(f, Size(w));
+		IO_Write(f, "\n");
 		for x in w do
-			AppendTo(filename, x);
-			AppendTo(filename, " ");	
+			IO_Write(f, x);
+			IO_Write(f, " ");	
 		od;
-		AppendTo(filename,"\n");
+		IO_Write(f,"\n");
 	od;
-
+	IO_Flush(f);
+	IO_Close(f);
 end );
 
 
 InstallGlobalFunction( CallExternalSmallCancellationProgram, function(G, order)
-	local smallCancellationProgram,command,tmpdir,filename_in,filename_out;
+	local smallCancellationProgram,command,tmpdir,filename_in,filename_out,f,output;
 
     smallCancellationProgram := Filename(DirectoriesPackagePrograms("smallcancellation"), "smallcancellation");
 
@@ -36,23 +41,42 @@ InstallGlobalFunction( CallExternalSmallCancellationProgram, function(G, order)
     command := Concatenation([smallCancellationProgram, " ", filename_in, " ", order , " > ", filename_out]);
     #Print(command,"\n\n");
     Exec(command);
-	return InputTextFile(filename_out);
+	f:=IO_File(filename_out,"r");
+	output:=IO_ReadLines(f);
+	IO_Close(f);
+	return output;
 end );
 
 InstallGlobalFunction(WordsFromOutput, function(G,output)
-	local num_words,words,i,l,sw,w,a;
-	num_words:=Int(Chomp(ReadLine(output)));
-	ReadLine(output);
+	# output is the result of calling IO_ReadLines on a file
+	local num_words,words,i,l,sw,w,a,line_number;
+	if output=fail then return fail; fi;
+	line_number:=1;
+	num_words:=Int(Chomp( output[line_number] ));
+	line_number:=line_number+1;
+	# (read empty line)
+	line_number:=line_number+1;
 	words:=[];
 	for i in [1..num_words] do
-		l:=Int(Chomp(ReadLine(output)));
-		sw:=SplitString(ReadLine(output), " ");
+		l:=Int(Chomp(output[line_number]));
+		line_number:=line_number+1;
+		sw:=SplitString(output[line_number], " ");
+		line_number:=line_number+1;
 		w:=List(sw, x->Int(Chomp(x)) );
 		Add(words,StructuralCopy(w));
 	od;
 	a:=GeneratorsOfGroup(FreeGroupOfFpGroup(G))[1];
 	words:=List(words, w->AssocWordByLetterRep(FamilyObj(a),w));
 	return Set(words);
+end );
+
+InstallGlobalFunction( GetBoolFromOutput, function(output)
+	# output is the result of calling IO_ReadLines on a file
+	if output <> fail then
+		return Int(Chomp( output[1] ))=1;
+	else
+		return fail;
+	fi;
 end );
 
 
@@ -65,7 +89,7 @@ end );
 InstallGlobalFunction(GroupSatisfiesCExternal, function(G,p)
 	local output;
 	output:= CallExternalSmallCancellationProgram(G, Concatenation("C ",String(p)) );
-	return Int(Chomp(ReadLine(output)))=1;
+	return GetBoolFromOutput(output);
 end );
 
 InstallGlobalFunction(GroupSatisfiesCPrimeExternal, function(G,lambda)
@@ -76,7 +100,7 @@ InstallGlobalFunction(GroupSatisfiesCPrimeExternal, function(G,lambda)
 		order:= Concatenation("CPrime ",String(Float(lambda)));
 	fi;
 	output:= CallExternalSmallCancellationProgram(G, order);
-	return Int(Chomp(ReadLine(output)))=1;
+	return GetBoolFromOutput(output);
 end );
 
 InstallGlobalFunction(SymmetrizedRelationSetExternal, function(G)

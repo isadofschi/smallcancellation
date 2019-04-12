@@ -17,5 +17,6 @@ DeclareGlobalFunction("GroupSatisfiesCExternal");
 
 DeclareGlobalFunction("GroupSatisfiesCPrimeExternal");
 
+DeclareGlobalFunction("GetBoolFromOutput");
 
 

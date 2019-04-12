@@ -130,4 +130,7 @@ gap>  GroupSatisfiesC(G,11);
 true
 gap>  GroupSatisfiesT(G,4);
 false
+gap> G:=F/[(x*y*z*z*z*y*x^3*y^-5*z^20*x^10*y^-4*x*y)^10*x^-1*y^-1*z^3];;
+gap> GroupSatisfiesCInternal(G,4)=GroupSatisfiesCExternal(G,4);
+true
 
