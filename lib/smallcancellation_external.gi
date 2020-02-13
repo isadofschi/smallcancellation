@@ -58,12 +58,11 @@ InstallGlobalFunction(WordsFromOutput, function(G,output)
 	line_number:=line_number+1;
 	words:=[];
 	for i in [1..num_words] do
-		l:=Int(Chomp(output[line_number]));
+		#l:=Int(Chomp(output[line_number]));
 		line_number:=line_number+1;
-		sw:=SplitString(output[line_number], " ");
+		sw:=SplitString(output[line_number], " ", "\n");
 		line_number:=line_number+1;
-		w:=List(sw, x->Int(Chomp(x)) );
-		Add(words,StructuralCopy(w));
+		Add(words,List(sw, Int ));
 	od;
 	a:=GeneratorsOfGroup(FreeGroupOfFpGroup(G))[1];
 	words:=List(words, w->AssocWordByLetterRep(FamilyObj(a),w));

@@ -205,7 +205,6 @@ Returns the adjacency matrix of the Whitehead graph of the FpGroup <A>G</A>. Not
 <Func Name="ExponentMatrixOfGroup" Arg="G"/>
 <Description>
 If <A>G</A> is a group with <A>m</A> relators and <A>n</A> generators, it returns the <A>m</A> by <A>n</A> matrix <M>A</M> such that <M>A_{i,j}</M> is the total exponent of the generator <M>g_j</M> in the relator <M>r_i</M>.
-Returns the adjacency matrix of the Whitehead graph of the FpGroup <A>G</A>. Note that the Whitehead graph may not be simple.
 </Description>
 </ManSection>
 
@@ -213,7 +212,6 @@ Returns the adjacency matrix of the Whitehead graph of the FpGroup <A>G</A>. Not
 <Func Name="ExponentMatrixOfPresentation" Arg="P"/>
 <Description>
 If <A>P</A> is a presentation with <A>m</A> relators and <A>n</A> generators, it returns the <A>m</A> by <A>n</A> matrix <M>A</M> such that <M>A_{i,j}</M> is the total exponent of the generator <M>g_j</M> in the relator <M>r_i</M>.
-Returns the adjacency matrix of the Whitehead graph of the FpGroup <A>G</A>. Note that the Whitehead graph may not be simple.
 </Description>
 </ManSection>
 
