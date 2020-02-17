@@ -2,7 +2,7 @@ dist: xenial
 language: c
 env:
   global:
-    - GAP_PKGS_TO_BUILD="io grape"
+    - GAP_PKGS_TO_BUILD="io profiling grape"
 
 addons:
   apt_packages:
