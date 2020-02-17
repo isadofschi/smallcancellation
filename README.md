@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/isadofschi/smallcancellation.svg?branch=master)](https://travis-ci.org/isadofschi/smallcancellation)
+[![Code Coverage](https://codecov.io/github/isadofschi/smallcancellation/coverage.svg?branch=master&token=)](https://codecov.io/gh/isadofschi/smallcancellation)
 
 # The SmallCancellation package
 
