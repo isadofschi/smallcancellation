@@ -64,12 +64,12 @@ AbstractHTML :=
   "Metric and nonmetric small cancellation conditions for group presentations and finitely presented groups.",
 
 PackageDoc := rec(
-  BookName  := "SmallCancellation",
+  BookName  := ~.PackageName,
   ArchiveURLSubset := ["doc"],
   HTMLStart := "doc/chap0.html",
   PDFFile   := "doc/manual.pdf",
   SixFile   := "doc/manual.six",
-  LongTitle := "SmallCancellation/Metric and nonmetric small cancellation conditions for group presentations and finitely presented groups.",
+  LongTitle :=  ~.Subtitle,
 ),
 
 
