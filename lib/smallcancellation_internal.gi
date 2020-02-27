@@ -211,7 +211,7 @@ InstallGlobalFunction(GroupSatisfiesCPrimeInternal, function(G,lambda,explain...
 	rels:=List(SymmetrizedRelationSet(G),LetterRepAssocWord);
 	for r in rels do
 		m:=max_piece(r);
-		if not m < lambda * Size(r) then
+		if not m < Rat(lambda) * Size(r) then
 			if explain then
 				a:=GeneratorsOfGroup(FreeGroupOfFpGroup(G))[1];
 				w:=AssocWordByLetterRep(FamilyObj(a),r);

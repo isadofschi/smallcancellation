@@ -1,6 +1,6 @@
 /*****************************************************************************
-* smallCancellation.cpp         SmallCancellation    Iván Sadofschi Costa    *
-*                               Package              (c) 2018                *
+* smallCancellation.cpp		 SmallCancellation	Iván Sadofschi Costa		*
+*							   Package			(c) 2018					*
 *****************************************************************************/
 
 #include <iostream>
@@ -24,13 +24,13 @@ typedef vector<int> word; //  a word in letter representation (as given by Lette
 struct Trie
 {
 	Trie() {node=false; piece=false; relation=false;}
-    bool node;
-    bool piece; // true iff it is a piece
-    bool relation; //true iff it is a relation
-    //int length;
-    map<int, Trie> children;
+	bool node;
+	bool piece; // true iff it is a piece
+	bool relation; //true iff it is a relation
+	//int length;
+	map<int, Trie> children;
 
-    void insert_relation(word &w, int pos=0){
+	void insert_relation(word &w, int pos=0){
 		if(node){
 			piece=true;
 			//longest_piece = max(longest_piece,length);
@@ -39,47 +39,47 @@ struct Trie
 			//length = pos;
 		}
 		if( pos != w.size() ){
-        	int x=w[pos];
-        	children[x].insert_relation(w, pos+1);
-        }else{
+			int x=w[pos];
+			children[x].insert_relation(w, pos+1);
+		}else{
 			relation=true;
 		}
 	}
 
 	/* bool find(word &w, int pos=0){
-        if( pos==w.size() )
-            return true;
-        int x=w[pos];
-        if( element( x, children) )
-            return children[x].find(w, pos+1 );
-        return false;
-    }*/
+		if( pos==w.size() )
+			return true;
+		int x=w[pos];
+		if( element( x, children) )
+			return children[x].find(w, pos+1 );
+		return false;
+	}*/
 	bool is_piece(word &w, int pos=0){
-        if( pos==w.size() )
+		if( pos==w.size() )
 			return piece;
-        int x=w[pos];
-        if( element( x, children) )
+		int x=w[pos];
+		if( element( x, children) )
 			return children[x].is_piece(w, pos+1 );
-        return false;
-    }
-    bool is_relation(word &w, int pos=0){
-        if( pos==w.size() )
-            return relation;
-        int x=w[pos];
-        if( element( x, children) )
-        	return children[x].is_relation(w, pos+1 );
-        return false;
-    }    
-    int max_piece(word &w, int pos=0){
+		return false;
+	}
+	bool is_relation(word &w, int pos=0){
+		if( pos==w.size() )
+			return relation;
+		int x=w[pos];
+		if( element( x, children) )
+			return children[x].is_relation(w, pos+1 );
+		return false;
+	}	
+	int max_piece(word &w, int pos=0){
 		// length of the largest prefix of w' that is a piece
 		// where w' is the subword of w that starts at pos
 		if( pos==w.size() )
 			return 0;
-        int x=w[pos];
-        if( element( x, children) && children[x].piece )
+		int x=w[pos];
+		if( element( x, children) && children[x].piece )
 			return 1+children[x].max_piece( w, pos+1 );
-        return 0;
-    }
+		return 0;
+	}
 
 };
 
@@ -96,13 +96,13 @@ void dfs_pieces(Trie &T, word &w){
 		pieces.push_back(w);
 	}
 	forall(it,T.children){
-			int x = it->first;
-			Trie T1= it->second;
-			if(T1.piece ){
-				w.push_back(x);
-				dfs_pieces(T1,w);
-				w.pop_back();
-			}
+		int x = it->first;
+		Trie T1= it->second;
+		if(T1.piece ){
+			w.push_back(x);
+			dfs_pieces(T1,w);
+			w.pop_back();
+		}
 	}
 }
 
@@ -127,7 +127,7 @@ vector< word > rels;
 set< word > rels_sym; // we do not want repeated words!
 
 void read_presentation(char* filename){
-    freopen(filename,"r", stdin);
+	freopen(filename,"r", stdin);
 	scanf("%d", &n_gen);
 	scanf("%d", &n_rel);
 	forn(i,n_rel){
@@ -295,6 +295,6 @@ int main(int argc, char *argv[]){
 		print_CPrimeRationalLambda(numerator,denominator);
 		return 0;
 	}
-    return 0;
+	return 0;
 }
 
