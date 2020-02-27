@@ -3,18 +3,6 @@
 ##  smallcancellation.gi   	 SmallCancellation Package		     Iván Sadofschi Costa
 ##  
 
-InstallGlobalFunction(WordRotations, function(w)
-	# unused
-	local rotations,l,i,wr;
-	wr:=CyclicallyReducedWord(w);
-	rotations:=[wr];
-	l:=Length(wr);
-	for i in [ 1 .. (l-1) ] do
-		Add(rotations, Subword(wr,i+1,l)*Subword(wr,1,i) );
-	od;
-	return Set(rotations);
-end );
-
 InstallGlobalFunction(SymmetrizedRelationSet, function(G)
 	local externalProgram;
 	externalProgram := Filename(DirectoriesPackagePrograms("smallcancellation"), "smallcancellation");
@@ -133,11 +121,11 @@ InstallGlobalFunction(GroupSatisfiesT, function(G,q)
 		# the Whitehead graph is not simple and q>4. Thus G does not satisfy T(q)
 		return false;
 	else
-		# the Whitehead graph is not simple or q=4
+		# the Whitehead graph is simple or q=4
 		M:=List(M, v-> List(v, a-> Minimum(a,1))); 
 		Gamma:=GraphFromAdjacencyMatrix(M); # Simplified Whitehead graph
 		m:=Girth(Gamma);
-		if m=-1 or q<=m  then
+		if m=-1 or q<=m  then # the graph has no cycle or the girth is at least q
 			return true;
 		else
 			return false;	
