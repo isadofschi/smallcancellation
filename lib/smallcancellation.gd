@@ -3,11 +3,11 @@
 ##  smallcancellation.gd 	 SmallCancellation Package           Iván Sadofschi Costa
 ##  
 
-#! @Chapter Small Cancellation Theory
+#! @Chapter Small Cancellation Theory: the classical conditions
 
 #! @Section Introduction
 
-#! A standard reference for Small Cancellation Theory is Lyndon-Schupp <Cite Key="LyndonSchupp" Where="Chapter V"/>. We review here some definitions and results. <P/> 
+#! The standard reference for Small Cancellation Theory is Lyndon-Schupp <Cite Key="LyndonSchupp" Where="Chapter V"/>. We review here some definitions and results. <P/> 
 
 #! A subset <M>R</M> of a free group <M>F</M> is called <E>symmetrized</E> if all elements of <M>R</M> are cyclically reduced and for each <M>r</M> in <M>R</M> all cyclically reduced conjugates of <M>r</M> and <M>r^{-1}</M> are also in <M>R</M>. If the set <M>R</M> is not symmetrized we may work instead with the <E>symmetrization</E> <M>R^*</M> of <M>R</M> (the smallest symmetrized set containing <M>R</M>). <P/> 
 
@@ -31,6 +31,8 @@
 #! Relators and their prefixes are stored in a data structure called trie <Cite Key="Trie" />.
 #! This provides an efficient way to write a word as a product of pieces using the minimum possible number of pieces.
 
+
+#! @Chapter Small Cancellation Theory: the classical conditions
 #! @Section Pieces
 
 DeclareGlobalFunction("WordRotations");
@@ -118,7 +120,7 @@ DeclareGlobalFunction("GroupSatisfiesT");
 DeclareGlobalFunction("PresentationSatisfiesT");
 
 
-
+#! @Chapter Additional functions
 #! @Section Additional functions
 
 #! @Arguments A
