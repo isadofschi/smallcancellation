@@ -3,7 +3,9 @@
 #include<vector>
 #include<set>
 #include<algorithm>
+
 using namespace std;
+
 #define forn(i,n) for(int i =0 ; i < (int)(n);i++)
 #define forall(i,c) for(typeof((c).begin()) i = (c).begin();i != (c).end();i++)
 
@@ -11,15 +13,20 @@ typedef double cost;
 typedef vector<int> vi;
 typedef pair<cost,int> edge;
 typedef vector< vector<edge > > Graph;
+
 #define INF 10000.0
-vector<cost> dijkstra( Graph & g, int source, int target = -1){
+
+vector<cost> dijkstra(Graph & g, int source, int target = -1){
 	vector<cost> D(g.size(),INF);
-	set< edge > pq;
-	pq.insert(make_pair(0,source)); D[source] = 0;
+	D[source] = 0;
+	set<edge> pq;
+	pq.insert(make_pair(D[source],source));
 	while(!pq.empty()){
-		edge p = *pq.begin(); pq.erase(pq.begin());
+		edge p = *pq.begin();
 		int u = p.second;
-		if(u == target) return D;
+		pq.erase(pq.begin());
+		if(u == target)
+			return D;
 		forall(it,g[u]){
 			cost c = it->first;
 			int v = it->second;
