@@ -5,6 +5,7 @@
 
 * Website: https://github.com/isadofschi/smallcancellation
 * Repository: https://github.com/isadofschi/smallcancellation
+* Documentation: http://mate.dm.uba.ar/~isadofschi/smallcancellation
 
 Metric and nonmetric small cancellation conditions.
 
