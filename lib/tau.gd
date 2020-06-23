@@ -12,9 +12,9 @@
 #! A presentation $P$ satisfies $\mathcal{T}'$ if $2\leq d(v)-d'_F(v)$ for every interior vertex $v$ in every reduced diagram $D$ over $P$.
 #! If this inequality is strict we say that the presentation satisfies condition $\mathcal{T}'_{&lt;}$.
 #! $$ $$
-#! If $P$ satisfies $\mathcal{T}'_{&lt;}-C(3)$ then the group presented by $P$ is hyperbolic <Cite Key="BMSC20" Where="Theorem 3.3" />.
-#! A finite presentation without proper powers which satisfies condition $\mathcal{T}'$ is diagrammatically reducible (DR) <Cite Key="BMSC20" Where="Theorem 3.2" />.
-#! If $P$ satisfies $\mathcal{T'}-C'(\frac{1}{2})$ and the defining relators have the same length then $P$ satisfies a quadratic isoperimetric inequality and solvable word problem <Cite Key="BMSC20" Where="Theorem 4.2" />.
+#! If $P$ is a finite presentations satisfying $\mathcal{T}'_{&lt;}-C(3)$ then the group presented by $P$ is hyperbolic <Cite Key="BMSC20" Where="Theorem 3.3" />.
+#! A presentation without proper powers which satisfies condition $\mathcal{T}'$ is diagrammatically reducible (DR) <Cite Key="BMSC20" Where="Theorem 3.2" />.
+#! If $P$ satisfies $\mathcal{T'}-C'(\frac{1}{2})$ and the defining relators have the same length then $P$ satisfies a quadratic isoperimetric inequality and if in addition $P$ is finite, it has solvable conjugacy problem <Cite Key="BMSC20" Where="Theorem 4.2" />.
 
 #! @Arguments G
 #! @Description Given an FpGroup G gives the minimum of $d(v)-d'_F(v)$.
