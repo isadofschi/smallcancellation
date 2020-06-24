@@ -19,4 +19,3 @@ DeclareGlobalFunction("GroupSatisfiesCPrimeExternal");
 
 DeclareGlobalFunction("GetBoolFromOutput");
 
-

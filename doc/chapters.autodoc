@@ -1,12 +1,19 @@
-@Chapter Installing and Loading the SmallCancellation Package
-@Section Compiling Binaries of the SmallCancellation Package
-@Section Loading the SmallCancellation Package
-
-@Chapter Small Cancellation Theory
+@Chapter Small Cancellation Theory: the classical conditions
 @Section Introduction
 @Section Pieces
 @Section Metric small cancellation conditions
 @Section Non-metric small cancellation conditions
-@Section Additional functions
 @Section Implementation details
+
+@Chapter More small cancellation conditions
+@Section Condition Tau'
+
+@Chapter Additional functions
+@Section Additional functions
+
+
+
+@Chapter Installing and Loading the SmallCancellation Package
+@Section Compiling Binaries of the SmallCancellation Package
+@Section Loading the SmallCancellation Package
 
