@@ -9,6 +9,7 @@ default: bin/$(GAPARCH)/smallcancellation
 bin/$(GAPARCH)/smallcancellation: src/smallcancellation.cpp
 	mkdir -p bin/$(GAPARCH)
 	$(CC) -O2 -o  bin/$(GAPARCH)/smallcancellation src/smallcancellation.cpp
+	$(CC) -Wall -o bin/$(GAPARCH)/tauexternal src/tauexternal.cpp -O3  -fopenmp
 
 clean:
 	rm -rf bin

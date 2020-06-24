@@ -44,6 +44,8 @@ InstallGlobalFunction( CallExternalSmallCancellationProgram, function(G, order)
 	f:=IO_File(filename_out,"r");
 	output:=IO_ReadLines(f);
 	IO_Close(f);
+	Exec(Concatenation("rm ",filename_in));
+	Exec(Concatenation("rm ",filename_out));
 	return output;
 end );
 
