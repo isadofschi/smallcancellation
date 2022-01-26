@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/isadofschi/smallcancellation.svg?branch=master)](https://travis-ci.org/isadofschi/smallcancellation)
+[![Build Status](https://travis-ci.com/isadofschi/smallcancellation.svg?branch=master)](https://travis-ci.com/isadofschi/smallcancellation)
 [![Code Coverage](https://codecov.io/github/isadofschi/smallcancellation/coverage.svg?branch=master&token=)](https://codecov.io/gh/isadofschi/smallcancellation)
 [![DOI](https://zenodo.org/badge/154586378.svg)](https://zenodo.org/badge/latestdoi/154586378)
 
